@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html>
-	<title>2213020180</title>
-	<frameset rows="15%,*" border="2">
-		<frame src="header.html">
-		<frameset cols="30%,*">
-			<frame src="daftarbuku.html">
-			<frame name="isi" src="biodata.html">
-		</frameset>
-	</frameset>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2213020180</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 15vh;
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #ccc;
+        }
+        .main {
+            display: flex;
+            height: 85vh;
+        }
+        .sidebar {
+            flex: 0 0 30%;
+            background-color: #f9f9f9;
+            border-right: 2px solid #ccc;
+        }
+        .content {
+            flex: 1;
+            background-color: #fff;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media screen and (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            .sidebar {
+                flex: 0 0 auto;
+                height: 50vh;
+                border-right: none;
+                border-bottom: 2px solid #ccc;
+            }
+            .content {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <iframe src="header.html"></iframe>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <iframe src="daftarbuku.html"></iframe>
+        </div>
+        <div class="content">
+            <iframe name="isi" src="biodata.html"></iframe>
+        </div>
+    </div>
+</body>
 </html>
